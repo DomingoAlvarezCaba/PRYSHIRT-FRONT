@@ -1,14 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import store from '@/store/index';
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Home-view',
+    component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard-view',
+    component: () => import('../views/Dashboard.vue'),
+    meta: {
+      requiresAuth: true
+    }
   }
 ]
 
@@ -18,4 +26,20 @@ const router = new VueRouter({
   routes
 })
 
-export default router
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(path => path.meta.requiresAuth)){
+      const auth = store.state.auth
+      console.log(auth)
+      if(auth){
+          next()
+      }else{
+          next({
+              name: 'Home-view'
+          })
+      }
+  }else{
+      next()
+  }
+})
+
+export default router;

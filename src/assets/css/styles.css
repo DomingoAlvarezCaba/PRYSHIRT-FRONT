@@ -98,6 +98,9 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 20px!important;
 }
+.red-font{
+  color: red!important;
+}
 .dark_red-font{
   color: var(--DARK_RED)!important;
 }
@@ -349,6 +352,10 @@
   color: var(--white-color)!important;
   border-bottom: 3px solid var(--LIGHT_TURQUOISE)!important;
 }
+.main_active{
+  color: var(--white-color)!important;
+  border-bottom: 3px solid var(--LIGHT_TURQUOISE)!important;
+}
 
 #nav-logo{
   height: 30px;
@@ -549,6 +556,11 @@
   border-bottom: 2px solid black!important;
   /* border: 2px solid var(--black-color); */
 }
+
+.login-input-error{
+  border-bottom: 2px solid red!important;
+  /* border: 2px solid var(--black-color); */
+}
 .login-input-span{
   background-color: transparent!important; 
   border-radius: 0.15em!important;
@@ -566,13 +578,28 @@
 }
 
 .login-button{
-  background-color: var(--LIGHT_GREEN)!important;
+  background-color: var(--primary-color-dark)!important;
   border: 0!important;
   color: black!important;
 }
 .login-button-hovered{
-  background-color: var(--green)!important;
+  background-color: var(--LIGHT_BLUE)!important;
 }
+
 #login-form{
   overflow: hidden;
+}
+
+.form-errors{
+  font-size: 0.75em!important;
+  color: red;
+  margin-bottom: 0!important;
+}
+
+#user-dropdown ul{
+  background-color: var(--black-color)!important;
+}
+
+#user-dropdown li :hover{
+  background-color: var(--black-color)!important;
 }
