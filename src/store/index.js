@@ -35,7 +35,7 @@ export default new Vuex.Store({
             })
             return new Promise((resolve) => {
                 resolve(data)
-            });
+            })
         },
         async register({ commit }, credentials) {
             var data = ''

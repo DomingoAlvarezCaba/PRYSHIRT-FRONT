@@ -41,9 +41,9 @@
                                                         <h3 class="form-errors text-left mt-1" v-for="error in passwordErrors" :key="error">{{error}}</h3>
                                                     </b-form-group>
                                                     <b-button @click="checkLogin()" @mouseover="hovering = true" @mouseout="hovering = false" :class="getCurrentButtonClass()" class="login-button mt-4">Login</b-button>
-                                                    <div class="mt-3">
+                                                    <!-- <div class="mt-3">
                                                         <b-link class="dark_yellow-font" href="#foo">Forgot your password?</b-link>
-                                                    </div>
+                                                    </div> -->
                                                 </b-form>
                                             </b-col>
                                         </b-row>
@@ -109,9 +109,9 @@
                                                     </b-form-group>
                                                     <b-form-checkbox class="text-left" id="type-input" v-model="type" name="checkbox-1" unchecked-value="empresa">Company</b-form-checkbox>
                                                     <b-button @click="checkRegister()" @mouseover="hovering = true" @mouseout="hovering = false" :class="getCurrentButtonClass()" class="login-button mt-4">Register</b-button>
-                                                    <div class="mt-3">
+                                                    <!-- <div class="mt-3">
                                                         <b-link class="dark_yellow-font" href="#foo">Forgot your password?</b-link>
-                                                    </div>
+                                                    </div> -->
                                                 </b-form>
                                             </b-col>
                                         </b-row>
